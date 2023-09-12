@@ -1,0 +1,22 @@
+https://wokwi.com/projects/375637852913654785  #Archivo Proyecto wokwi
+
+
+
+#Codigo micropython
+print("Hello, ESP32!")
+
+from machine import Pin
+Switch = Pin (18, Pin.IN)
+ledAzul = Pin (27, Pin.OUT)
+
+while True:
+
+  if (Switch.value()==1):
+    ledAzul.value(1)
+    print ("Siuuuuuuu")
+
+
+  else: 
+    ledAzul.value(0)
+    print ("Nouuuuuuuuu")
+
