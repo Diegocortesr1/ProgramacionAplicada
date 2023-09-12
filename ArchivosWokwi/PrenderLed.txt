@@ -1,0 +1,16 @@
+https://wokwi.com/projects/375634177260875777 #Link programa Wokwi
+
+
+Programa micropytho:
+
+from machine import Pin 
+import time
+
+ledRojo = Pin (12, Pin.OUT)
+
+for i in range (30):
+  ledRojo.value(1)
+  time.sleep(0.5)
+  ledRojo.value(0)
+  time.sleep(0.25)
+
