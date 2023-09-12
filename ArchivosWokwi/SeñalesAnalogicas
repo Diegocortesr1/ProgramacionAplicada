@@ -1,0 +1,18 @@
+https://wokwi.com/projects/375637286881746945  #Link Proyecto Wokwi
+
+
+
+#Codigo Micropython
+print("Hello, ESP32!")
+from machine import Pin, ADC
+from time import sleep
+pot = ADC(Pin(12))
+pot.atten(ADC.ATTN_11DB)
+
+
+while True:
+  pot_valor = pot.read()
+  voltaje = (3.3/4095)*pot_valor #Para convertirlo a voltaje
+  print (voltaje)
+  sleep(0.1)
+
